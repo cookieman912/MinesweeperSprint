@@ -4,7 +4,7 @@ function renderBoard(mat, selector) {
     strHTML += '<tr>';
     for (var j = 0; j < mat[0].length; j++) {
       var tdId = 'cell-' + i + '-' + j;
-        strHTML +=  `<td id="${tdId}"  oncontextmenu  ="toggleMarkCell(this)" onclick="showCell(this)"><img src="img/notshown.jpg"> </td>`
+        strHTML +=  `<td id="${tdId}"  oncontextmenu  ="toggleMarkCell(this)" onclick="cellClicked(this)"><img src="img/notshown.jpg"> </td>`
 
         }
     
@@ -17,13 +17,13 @@ function renderBoard(mat, selector) {
 }
 
 // location such as: {i: 2, j: 7}
-function renderCell(location, value) {
-  // Select the elCell and set the value
-  var elCell = document.querySelector(`.cell${location.i}-${location.j}`);
-  // if (elCell===GHOST)
-  elCell.style.color = value.color
-  elCell.innerHTML = value;
-}
+// function renderCell(location, value) {
+//   // Select the elCell and set the value
+//   var elCell = document.querySelector(`.cell${location.i}-${location.j}`);
+//   // if (elCell===GHOST)
+//   elCell.style.color = value.color
+//   elCell.innerHTML = value;
+// }
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;

@@ -6,8 +6,8 @@
             color: violet;
             text-align: center;
         }
-        table img{
-
+        img{
+            border-image: 0px;
         width: 70px;
         height: 70px;
         margin-bottom: -24px;
@@ -31,9 +31,12 @@
             padding: 0px;
         
         }
-       
+
+
+
+
+        
         .timer{
-            text-align: center;
             visibility: hidden;
             color: violet;
         }
