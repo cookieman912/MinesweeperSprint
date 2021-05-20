@@ -30,8 +30,6 @@ function init() {
     gBoard = buildBoard();
     renderBoard(gBoard, '.board-container')
     renderHints();
-    
-
 }
 
 function changeDiff(difficultyValue) {
@@ -66,7 +64,6 @@ function buildBoard() {
                 isMine: false,
                 isMarked: false,
             };
-
         }
     }
 

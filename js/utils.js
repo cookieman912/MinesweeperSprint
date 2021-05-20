@@ -7,10 +7,8 @@ function renderBoard(mat, selector) {
     strHTML += '<tr>';
     for (var j = 0; j < mat[0].length; j++) {
       var tdId = 'cell-' + i + '-' + j;
-        strHTML +=  `<td id="${tdId}"  oncontextmenu  ="toggleMarkCell(this)" onclick="cellClicked(this)"><img src="img/notshown.jpg"> </td>`
-
-        }
-    
+      strHTML += `<td id="${tdId}"  oncontextmenu  ="toggleMarkCell(this)" onclick="cellClicked(this)"><img src="img/notshown.jpg"> </td>`
+    }
     strHTML += '</tr>'
   }
   strHTML += '</tbody></table>';
@@ -18,22 +16,17 @@ function renderBoard(mat, selector) {
   elContainer.innerHTML = strHTML;
 }
 
-function renderHints(){
-  var strHTML='';
+function renderHints() {
+  var strHTML = '';
   for (var i = 0; i < gHints.length; i++) {
-    strHTML+=`<img src="img/hint.png" id="${i}" onclick="toggleHint(this)"=>`
+    strHTML += `<img src="img/hint.png" id="${i}" onclick="toggleHint(this)"=>`
   }
-  var hintsContainer=document.querySelector('.hints');
-  hintsContainer.innerHTML=strHTML
+  var hintsContainer = document.querySelector('.hints');
+  hintsContainer.innerHTML = strHTML
 }
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
-}
-
-function getRandomColor() {
-  var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  return randomColor
 }
 
 function getCellCoord(strCellId) {
@@ -45,8 +38,8 @@ function getCellCoord(strCellId) {
 }
 
 
-function getRandomSquareLocation(min,max){
-  var randomLocation={i:getRandomInt(min,max), j:getRandomInt(min,max)}
+function getRandomSquareLocation(min, max) {
+  var randomLocation = { i: getRandomInt(min, max), j: getRandomInt(min, max) }
   return randomLocation;
 }
 
