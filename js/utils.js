@@ -15,6 +15,7 @@ function renderBoard(mat, selector) {
   elContainer.innerHTML = strHTML;
   console.table(mat)
 }
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 // location such as: {i: 2, j: 7}
 // function renderCell(location, value) {

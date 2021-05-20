@@ -1,42 +1,75 @@
         body{
-            background-color: rgb(8, 7, 7);
+            background-color: black;
             
         }
         .title{
             color: violet;
             text-align: center;
         }
-        img{
-            border-image: 0px;
-        width: 70px;
-        height: 70px;
-        margin-bottom: -24px;
-        
-        }
         table {  
             text-align: center;
-            background-color: rgb(61, 8, 104);
+            background-color: rgb(67, 20, 155);   
             margin-left: auto;
             margin-right: auto;
-            margin-top: 300px;
-            color: turquoise    
+            margin-top: 50px;
+            color: turquoise ;   
         }
         
+   
+       table img{
+            border-image: 0px;
+        width: 50px;
+        height: 50px;
+        margin-bottom: -18px;
+        
+        }
+    .wizard{
+        text-align: center;
+        color: blueviolet;
+
+    }
+
+    .wizard img{
+        width: 100px;
+        
+    }
+
+   .lives{
+       text-align: center;
+       color: blueviolet;
+       font-size: 30px;
+       margin-top: 20px;
+       margin-bottom :20px;
+   }
+
+
+
         td{
-            background-color: rgb(45, 0, 128);
-            max-width: 70px;
-            min-width: 70px; 
-            line-height: 70px;  
-            font-size: 35px;
+            background-color: rgb(40, 21, 75);
+            max-width: 50px;
+            min-width: 50px; 
+            line-height: 50px;  
+            font-size: 20px;
             padding: 0px;
         
         }
 
+    .difficulty{
+        text-align: center;
+        box-shadow: rgb(136, 42, 18);
 
+    }
 
+    .difficulty button{
+    background-color: blueviolet;
+    color: white;
+    box-shadow: blue;
+    border-radius: 15%;
+    font-size: 40px;
 
+    }
         
         .timer{
-            visibility: hidden;
-            color: violet;
+            color: black;
+            text-align: center;
         }
