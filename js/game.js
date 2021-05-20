@@ -30,6 +30,8 @@ function init() {
     gBoard = buildBoard();
     renderBoard(gBoard, '.board-container')
     renderHints();
+    
+
 }
 
 function changeDiff(difficultyValue) {
@@ -100,7 +102,6 @@ function ensureRandomLocations(randLocations) {
     for (var i = 0; i < randLocations.length; i++) {
         for (var j = i + 1; j < randLocations.length; j++) {
             if (randLocations[i].i === randLocations[j].i && randLocations[i].j === randLocations[j].j) {
-                console.log('in!');
                 randLocations[i] = getRandomSquareLocation(0, gLevel.SIZE)
                 ensureRandomLocations(randLocations)
             }
@@ -324,6 +325,9 @@ function revealHint(location, hintId) {
                     elCell = document.querySelector(`#${strId}`);
                     elCell.innerHTML = "<img src=\"img/notshown.jpg\"></img>";
                 }
+                if (gBoard[i][j].isMarked === true) {
+                    elCell.innerHTML = "<img src=\"img/mark.jpg\"></img>";
+                }
             }
         }
     }, 1000)
@@ -390,16 +394,16 @@ function restart() {
     var elTimer = document.querySelector('.timer')
     elTimer.style.color = 'black'
 
-     for(var i=0; i<gHints.length; i++){
-         gHints[i].isHintOn=false;
-         gHints[i].isHintSpent=false;
-     }
+    for (var i = 0; i < gHints.length; i++) {
+        gHints[i].isHintOn = false;
+        gHints[i].isHintSpent = false;
+    }
     var elWizard = document.querySelector('.wizard')
     elWizard.innerHTML = `<img onclick="restart()" src=\"img/happywizard.png\"></img>`
     init();
     gWinSound.pause();
 
-    
+
 
 
 }
