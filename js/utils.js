@@ -1,3 +1,6 @@
+'use strict'
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 function renderBoard(mat, selector) {
   var strHTML = '<table border="0"><tbody>';
   for (var i = 0; i < mat.length; i++) {
@@ -13,18 +16,16 @@ function renderBoard(mat, selector) {
   strHTML += '</tbody></table>';
   var elContainer = document.querySelector(selector);
   elContainer.innerHTML = strHTML;
-  console.table(mat)
 }
-document.addEventListener('contextmenu', event => event.preventDefault());
 
-// location such as: {i: 2, j: 7}
-// function renderCell(location, value) {
-//   // Select the elCell and set the value
-//   var elCell = document.querySelector(`.cell${location.i}-${location.j}`);
-//   // if (elCell===GHOST)
-//   elCell.style.color = value.color
-//   elCell.innerHTML = value;
-// }
+function renderHints(){
+  var strHTML='';
+  for (var i = 0; i < gHints.length; i++) {
+    strHTML+=`<img src="img/hint.png" id="${i}" onclick="toggleHint(this)"=>`
+  }
+  var hintsContainer=document.querySelector('.hints');
+  hintsContainer.innerHTML=strHTML
+}
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -48,3 +49,4 @@ function getRandomSquareLocation(min,max){
   var randomLocation={i:getRandomInt(min,max), j:getRandomInt(min,max)}
   return randomLocation;
 }
+

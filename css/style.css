@@ -21,8 +21,17 @@
         width: 50px;
         height: 50px;
         margin-bottom: -18px;
+       }
+        td{
+            background-color: rgb(40, 21, 75);
+            max-width: 50px;
+            min-width: 50px; 
+            line-height: 50px;  
+            font-size: 20px;
+            padding: 0px;
         
         }
+        
     .wizard{
         text-align: center;
         color: blueviolet;
@@ -42,18 +51,6 @@
        margin-bottom :20px;
    }
 
-
-
-        td{
-            background-color: rgb(40, 21, 75);
-            max-width: 50px;
-            min-width: 50px; 
-            line-height: 50px;  
-            font-size: 20px;
-            padding: 0px;
-        
-        }
-
     .difficulty{
         text-align: center;
         box-shadow: rgb(136, 42, 18);
@@ -69,7 +66,25 @@
 
     }
         
-        .timer{
-            color: black;
-            text-align: center;
+ .timer{ color: black;
+         text-align: center;
         }
+
+    .hints{
+        text-align: center;
+    }    
+    .hints img{
+        width: 45px;
+        border-radius: 20px;
+        margin-left: 20px;
+        margin-right:20px;
+        margin-top: 20px;
+        /* box-shadow: 0px 0px 15px #fff; */
+        
+    }
+    .isOn{
+        box-shadow: 0px 0px 38px rgb(148, 112, 231);
+    }
+    .isSpent{
+        box-shadow: 0px 0px 20px rgb(246, 246, 246); 
+    }
